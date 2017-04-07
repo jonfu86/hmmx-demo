@@ -16,6 +16,44 @@
                 "radioButtonGroup": {"<-": "@radioButtonGroup"}
             }
         },
+        "grid": {
+            "prototype": "hmmx/ui/grid.reel",
+            "properties": {
+                "element": {"#": "grid"}
+            }
+        },
+        "gridCell1": {
+            "prototype": "hmmx/ui/grid-cell.reel",
+            "properties": {
+                "element": {"#": "gridCell1"}
+            }
+        },
+        "gridCell2": {
+            "prototype": "hmmx/ui/grid-cell.reel",
+            "properties": {
+                "element": {"#": "gridCell2"}
+            }
+        },
+        "gridRow": {
+            "prototype": "hmmx/ui/grid-row.reel",
+            "properties": {
+                "element": {"#": "gridRow"}
+            }
+        },
+        "header": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "header"},
+                "value": "Header Text"
+            }
+        },
+        "header2": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "header2"},
+                "value": "Header Text"
+            }
+        },
         "radioButton1": {
             "prototype": "hmmx/ui/radio-button.reel",
             "properties": {
@@ -58,23 +96,35 @@
             "bindings": {
                 "value": {"<-": "@radioButtonGroup.controller.value ? @radioButtonGroup.controller.value : 'No radio selected' "}
             }
-        },
-        "textfield": {
-            "prototype": "hmmx/ui/text-field.reel"
-        },
-        "textpanel": {
-            "prototype": "hmmx/ui/text-panel.reel",
-            "properties": {
-                "contenteditable": "true",
-                "dir": "ltr",
-                "draggable": "true"
-            }
         }
     }
     </script>
 </head>
 <body>
     <div data-montage-id="main" data-montage-skin="light" class="Main">
+        <h1 data-montage-id="header3"></h1>
+        <p>
+            This guide shows how to make your service look consistent with the rest of GOV.UK. 
+        It includes example code and guidance for layout, typography, colour, images, icons, forms, buttons and data.
+        </p>
+        <div data-montage-id="grid">
+            <div data-montage-id="gridRow">
+                <div data-montage-id="gridCell1">
+                    <h1 data-montage-id="header"></h1>
+                    <p>
+                        This guide shows how to make your service look consistent with the rest of GOV.UK. 
+        It includes example code and guidance for layout, typography, colour, images, icons, forms, buttons and data.
+                    </p>
+                </div>
+                <div data-montage-id="gridCell2">
+                    <h1 data-montage-id="header2"></h1>
+                    <p>
+                        This guide shows how to make your service look consistent with the rest of GOV.UK. 
+        It includes example code and guidance for layout, typography, colour, images, icons, forms, buttons and data.
+                    </p>
+                </div>
+            </div>
+        </div>
         <h1>
             Hmmx Demo
         </h1>
@@ -86,8 +136,6 @@
         <div data-montage-id="text" class="text">
 
         </div>
-        <input type="text" data-montage-id="textpanel">
-        <input type="text" data-montage-id="textfield">
     </div>
 </body>
 </html>
