@@ -2,80 +2,92 @@
 <html>
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <title>Main</title>
-
+    <title>
+        Main
+    </title>
     <link rel="stylesheet" type="text/css" href="main.css">
-
     <script type="text/montage-serialization">
-        {
-            "owner": {
-                "properties": {
-                    "element": {"#": "main"}
-                },
-                "bindings": {
-                    "radioButtonGroup": {"<-": "@radioButtonGroup"}
-                }
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "main"}
             },
-            
-            "radioButtonGroup": {
-                "prototype": "hmmx/ui/radio-button-group.reel",
-                "properties": {
-                    "element": {"#": "radioButtonGroup"},
-                    "isMandatory": true
-                }
+            "bindings": {
+                "radioButtonGroup": {"<-": "@radioButtonGroup"}
+            }
+        },
+        "radioButton1": {
+            "prototype": "hmmx/ui/radio-button.reel",
+            "properties": {
+                "element": {"#": "radioButton1"},
+                "label": "Radio Button 1",
+                "radioButtonGroup": {"@": "radioButtonGroup"},
+                "value": "Radio Button 1"
+            }
+        },
+        "radioButton2": {
+            "prototype": "hmmx/ui/radio-button.reel",
+            "properties": {
+                "element": {"#": "radioButton2"},
+                "label": "Radio Button 2",
+                "radioButtonGroup": {"@": "radioButtonGroup"},
+                "value": "Radio Button 2"
+            }
+        },
+        "radioButton3": {
+            "prototype": "hmmx/ui/radio-button.reel",
+            "properties": {
+                "element": {"#": "radioButton3"},
+                "label": "Radio Button 3",
+                "radioButtonGroup": {"@": "radioButtonGroup"},
+                "value": "Radio Button 3"
+            }
+        },
+        "radioButtonGroup": {
+            "prototype": "hmmx/ui/radio-button-group.reel",
+            "properties": {
+                "element": {"#": "radioButtonGroup"},
+                "isMandatory": true
+            }
+        },
+        "text": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "text"}
             },
-
-            "radioButton1": {
-                "prototype": "hmmx/ui/radio-button.reel",
-                "properties": {
-                    "element": {"#": "radioButton1"},
-                    "label": "Radio Button 1",
-                    "value": "Radio Button 1",
-                    "radioButtonGroup": {"@": "radioButtonGroup"}
-                }
-            },
-
-            "radioButton2": {
-                "prototype": "hmmx/ui/radio-button.reel",
-                "properties": {
-                    "element": {"#": "radioButton2"},
-                    "label": "Radio Button 2",
-                    "value": "Radio Button 2",
-                    "radioButtonGroup": {"@": "radioButtonGroup"}
-                }
-            },
-
-            "radioButton3": {
-                "prototype": "hmmx/ui/radio-button.reel",
-                "properties": {
-                    "element": {"#": "radioButton3"},
-                    "label": "Radio Button 3",
-                    "value": "Radio Button 3",
-                    "radioButtonGroup": {"@": "radioButtonGroup"}
-                }
-            },
-
-            "text": {
-                "prototype": "montage/ui/text.reel",
-                "properties": {
-                    "element": {"#": "text"}
-                },
-                "bindings": {
-                    "value": {"<-": "@radioButtonGroup.controller.value ? @radioButtonGroup.controller.value : 'No radio selected' "}
-                }
+            "bindings": {
+                "value": {"<-": "@radioButtonGroup.controller.value ? @radioButtonGroup.controller.value : 'No radio selected' "}
+            }
+        },
+        "textfield": {
+            "prototype": "hmmx/ui/text-field.reel"
+        },
+        "textpanel": {
+            "prototype": "hmmx/ui/text-panel.reel",
+            "properties": {
+                "contenteditable": "true",
+                "dir": "ltr",
+                "draggable": "true"
             }
         }
+    }
     </script>
 </head>
 <body>
     <div data-montage-id="main" data-montage-skin="light" class="Main">
-        <h1>Hmmx Demo</h1>
+        <h1>
+            Hmmx Demo
+        </h1>
         <div data-montage-id="radioButtonGroup">
             <div data-montage-id="radioButton1"></div>
             <div data-montage-id="radioButton2"></div>
             <div data-montage-id="radioButton3"></div>
         </div>
-        <div data-montage-id="text" class="text"></div>
+        <div data-montage-id="text" class="text">
+
+        </div>
+        <input type="text" data-montage-id="textpanel">
+        <input type="text" data-montage-id="textfield">
     </div>
 </body>
 </html>
