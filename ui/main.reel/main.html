@@ -16,13 +16,6 @@
                 "radioButtonGroup": {"<-": "@radioButtonGroup"}
             }
         },
-        "button": {
-            "prototype": "hmmx/ui/button.reel",
-            "properties": {
-                "element": {"#": "button"},
-                "label": "Button"
-            }
-        },
         "grid": {
             "prototype": "hmmx/ui/grid.reel",
             "properties": {
@@ -62,14 +55,6 @@
                 "value": "Header Text"
             }
         },
-        "radioButton": {
-            "prototype": "hmmx/ui/radio-button.reel",
-            "properties": {
-                "element": {"#": "radioButton"},
-                "label": "New label",
-                "radioButtonGroup": {"@": "radioButtonGroup2"}
-            }
-        },
         "radioButton1": {
             "prototype": "hmmx/ui/radio-button.reel",
             "properties": {
@@ -97,33 +82,11 @@
                 "value": "Radio Button 3"
             }
         },
-        "radioButton4": {
-            "prototype": "hmmx/ui/radio-button.reel",
-            "properties": {
-                "element": {"#": "radioButton4"},
-                "label": "Testers",
-                "radioButtonGroup": {"@": "radioButtonGroup2"}
-            }
-        },
         "radioButtonGroup": {
             "prototype": "hmmx/ui/radio-button-group.reel",
             "properties": {
                 "element": {"#": "radioButtonGroup"},
                 "isMandatory": true
-            }
-        },
-        "radioButtonGroup2": {
-            "prototype": "hmmx/ui/radio-button-group.reel",
-            "properties": {
-                "element": {"#": "radioButtonGroup2"}
-            }
-        },
-        "radioButtonNew": {
-            "prototype": "hmmx/ui/radio-button.reel",
-            "properties": {
-                "element": {"#": "radioButtonNew"},
-                "label": "radioButtonNew",
-                "radioButtonGroup": {"@": "radioButtonGroup2"}
             }
         },
         "text": {
@@ -161,12 +124,6 @@
         <h1>
             Hmmx Demo
         </h1>
-        <div data-montage-id="radioButtonGroup2">
-            <input type="radio" data-montage-id="radioButtonNew">
-            <input type="radio" data-montage-id="radioButton">
-            <input type="radio" data-montage-id="radioButton4">
-        </div>
-        <button data-montage-id="button"></button>
         <div data-montage-id="radioButtonGroup">
             <div data-montage-id="radioButton1"></div>
             <div data-montage-id="radioButton2"></div>
