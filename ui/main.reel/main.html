@@ -55,11 +55,15 @@
                 "value": "Header Text"
             }
         },
-        "radio": {
+        "newRadioButton": {
             "prototype": "hmmx/ui/radio-button.reel",
             "properties": {
-                "element": {"#": "radio"},
-                "radioButtonGroup": "@radioButtonGroup"
+                "element": {"#": "newRadioButton"},
+                "hidden": null,
+                "label": "newRadioButton",
+                "lang": null,
+                "radioButtonGroup": "{\"@\": radioButtonGroup}",
+                "style": null
             }
         },
         "radioButton1": {
@@ -132,7 +136,7 @@
             Hmmx Demo
         </h1>
         <div data-montage-id="radioButtonGroup">
-            <input type="radio" data-montage-id="radio">
+            <input type="radio" data-montage-id="newRadioButton">
             <div data-montage-id="radioButton1"></div>
             <div data-montage-id="radioButton2"></div>
             <div data-montage-id="radioButton3"></div>
