@@ -55,14 +55,6 @@
                 "value": "Header Text"
             }
         },
-        "newRadio": {
-            "prototype": "hmmx/ui/radio-button.reel",
-            "properties": {
-                "element": {"#": "newRadio"},
-                "label": "newRadio",
-                "radioButtonGroup": {"@": "radioButtonGroup"}
-            }
-        },
         "radioButton1": {
             "prototype": "hmmx/ui/radio-button.reel",
             "properties": {
@@ -100,7 +92,10 @@
         "text": {
             "prototype": "montage/ui/text.reel",
             "properties": {
-                "element": {"#": "text"}
+                "element": {"#": "text"},
+                "lang": null,
+                "spellcheck": null,
+                "tabindex": null
             },
             "bindings": {
                 "value": {"<-": "@radioButtonGroup.controller.value ? @radioButtonGroup.controller.value : 'No radio selected' "}
@@ -133,7 +128,6 @@
             Hmmx Demo
         </h1>
         <div data-montage-id="radioButtonGroup">
-            <input type="radio" data-montage-id="newRadio">
             <div data-montage-id="radioButton1"></div>
             <div data-montage-id="radioButton2"></div>
             <div data-montage-id="radioButton3"></div>
